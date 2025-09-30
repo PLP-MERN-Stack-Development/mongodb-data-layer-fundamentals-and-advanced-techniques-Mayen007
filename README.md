@@ -3,19 +3,24 @@
 ## Setup
 
 1. Install **Node.js** and **MongoDB Community Edition** (or use MongoDB Atlas).
-2. Install dependencies:
+2. Install project dependencies:
    ```bash
-   npm install mongodb
+   npm install
    ```
-3. (Optional) Run `setup_db.js` to create the database and collection:
+3. Create a `.env` file in the project root and add your MongoDB connection string:
+   ```env
+   MONGODB_URI=mongodb:<your_connection_string>
+   ```
+   (Replace with your Atlas URI if using MongoDB Atlas)
+4. (Optional) Run `setup_db.js` to create the database and collection:
    ```bash
    node setup_db.js
    ```
-4. Run `insert_books.js` to populate the database:
+5. Run `insert_books.js` to populate the database:
    ```bash
    node insert_books.js
    ```
-5. Use `queries.js` in mongosh or Compass to run all required queries.
+6. Use `queries.js` in mongosh or Compass to run all required queries.
 
 ## Files
 
