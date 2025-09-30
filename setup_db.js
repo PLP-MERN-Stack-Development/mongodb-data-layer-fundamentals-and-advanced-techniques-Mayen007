@@ -5,7 +5,8 @@
 const { MongoClient } = require('mongodb');
 
 // Change this URI if using MongoDB Atlas
-const uri = 'mongodb://localhost:27017';
+require('dotenv').config();
+const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 
 async function main() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
